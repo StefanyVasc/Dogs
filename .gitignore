@@ -1,6 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 
+# FILES VSCODE
+/.vscode
+.vscode/settings.json
+
 
 # env
 .env
@@ -26,3 +30,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
