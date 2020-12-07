@@ -1,0 +1,6 @@
+{
+  "./src/*{.js, .jsx, ts, tsx}": [
+    "eslint src/*.js --fix-dry-run",
+    "npx prettier --write"
+  ]
+}
