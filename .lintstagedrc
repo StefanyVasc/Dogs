@@ -2,7 +2,6 @@
   "./src/*{.js, .jsx, ts, tsx}": [
     "eslint --fix",
     "prettier --write",
-    "CI=true yarn test -bail --findRelatedTests",
     "git add",
   ]
 }
