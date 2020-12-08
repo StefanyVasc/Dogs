@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     color: #333;
-
+    padding-top: 4rem;
     font-family: ${fonts.typeFirst}
   }
 
@@ -27,6 +27,10 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${fonts.typeFirst};
     color: #333;
 
+  }
+
+  a {
+    text-decoration: none;
   }
 
   .container{

@@ -1,18 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import * as S from '../Layout/styled';
+import { ReactComponent as Dogs } from '../../assets/dogs.svg';
+import * as S from './styled';
 
 const Header = () => {
   return (
-    <div>
-      <S.Layout as="nav">
-        <Link to="/">Home</Link>
-        <Link to="/login">Login | Cadastro</Link>
-      </S.Layout>
-      {/* <nav className="container">
-
-      </nav> */}
-    </div>
+    <S.HeaderWrapper>
+      <S.HeaderNav as="nav">
+        <S.HeaderLogoLink to="/" aria-label="Dogs - Home">
+          <Dogs />
+        </S.HeaderLogoLink>
+        <S.HeaderButton to="/login">Login | Cadastro</S.HeaderButton>
+      </S.HeaderNav>
+    </S.HeaderWrapper>
   );
 };
 
