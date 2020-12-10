@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
-import fonts from '../settings/fonts';
 
 const GlobalStyles = createGlobalStyle`
   ${reset}
@@ -10,9 +9,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    color: #333;
+    color: var(--default-color);
     padding-top: 4rem;
-    font-family: ${fonts.typeFirst}
+    font-family: var(--typeFirst);
   }
 
 
@@ -24,8 +23,8 @@ const GlobalStyles = createGlobalStyle`
   button, input{
     display: block;
     font-size: 1rem;
-    font-family: ${fonts.typeFirst};
-    color: #333;
+    font-family: var(--typeFirst);
+    color: var(--default-color);
 
   }
 
