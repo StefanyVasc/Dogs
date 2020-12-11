@@ -1,26 +1,23 @@
-import { useState } from 'react';
+import React from 'react';
 
-const typesValidation = {
+const types = {
   email: {
-    regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-    message: 'Preencha com um email válido',
+    regex: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+    message: 'Preencha um email válido',
   },
 };
 
 const useForm = (type) => {
-  const [value, setValue] = useState('');
-  const [error, setError] = useState(null);
+  const [value, setValue] = React.useState('');
+  const [error, setError] = React.useState(null);
 
   function validate(value) {
     if (type === false) return true;
     if (value.length === 0) {
-      setError('Preencha um valor');
+      setError('Preencha um valor.');
       return false;
-    } else if (
-      typesValidation[type] &&
-      !typesValidation[type].regex.test(value)
-    ) {
-      setError(typesValidation[type].message);
+    } else if (types[type] && !types[type].regex.test(value)) {
+      setError(types[type].message);
       return false;
     } else {
       setError(null);
@@ -29,9 +26,10 @@ const useForm = (type) => {
   }
 
   function onChange({ target }) {
-    error && validate(target.value);
+    if (error) validate(target.value);
     setValue(target.value);
   }
+
   return {
     value,
     setValue,
