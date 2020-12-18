@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import { UserStorage } from './components/UserStorage/UserContext';
 import Home from './pages/Home';
-import Login from './pages/Login/Login';
+import Login from './pages/Login';
 
 export default function Rotas() {
   return (
