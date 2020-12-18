@@ -1,6 +1,8 @@
 :root {
   --default-color: #333;
   --default-color-light: #fff;
+  --grey-light: #666;
+  --grey-lightner: #ddd;
   --primary-color: #fb1;
   --secondary-color: #764701;
   --tertiary-color: #fea;
