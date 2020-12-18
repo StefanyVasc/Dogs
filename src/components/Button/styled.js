@@ -11,7 +11,7 @@ export const ButtonForm = styled.button`
   padding: 0.8rem 1.2rem;
   box-sizing: border-box;
   transition: 0.1s;
-  min-width: 0.8rem;
+  min-width: 8rem;
 
   &:hover,
   &:focus {
