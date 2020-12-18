@@ -1,4 +1,5 @@
 import React from 'react';
+import Error from '../Error';
 import * as S from './styled';
 
 const Input = ({ label, type, name, onChange, value, error, onBlur }) => {
@@ -13,8 +14,7 @@ const Input = ({ label, type, name, onChange, value, error, onBlur }) => {
         onChange={onChange}
         onBlur={onBlur}
       />
-
-      {error && <S.InputError>{error}</S.InputError>}
+      <Error error={error} />
     </S.InputWrapper>
   );
 };

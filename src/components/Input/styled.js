@@ -27,8 +27,3 @@ export const InputLabel = styled.label`
   line-height: 1;
   padding-bottom: 0.5rem;
 `;
-export const InputError = styled.p`
-  color: var(--error-color);
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
-`;
