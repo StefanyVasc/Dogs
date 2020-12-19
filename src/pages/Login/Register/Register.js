@@ -3,6 +3,7 @@ import Button from '../../../components/Button';
 import Error from '../../../components/Error';
 import Input from '../../../components/Input';
 import { UserContext } from '../../../components/UserStorage/UserContext';
+import useFetch from '../../../hooks/useFetch';
 import useForm from '../../../hooks/useForm';
 import { USER_POST } from '../../../services/api';
 import { Title } from '../../../styles/elements/base';
@@ -14,7 +15,8 @@ const Register = () => {
   const password = useForm();
   /* const password = useForm('password'); */
 
-  const { userLogin, error, loading } = useContext(UserContext);
+  const { userLogin } = useContext(UserContext);
+  const { loading, error, request } = useFetch();
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -23,7 +25,7 @@ const Register = () => {
       email: email.value,
       password: password.value,
     });
-    const response = await fetch(url, options);
+    const { response } = await request(url, options);
 
     response.ok && userLogin(username.value, password.value);
   }
@@ -36,7 +38,7 @@ const Register = () => {
         <Input label="Email" type="email" name={email} {...email} />
         <Input label="Senha" type="password" name={password} {...password} />
         {loading ? (
-          <Button disabled>Carregando...</Button>
+          <Button disabled>Cadastrando...</Button>
         ) : (
           <Button>Cadastrar</Button>
         )}
