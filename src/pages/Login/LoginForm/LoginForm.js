@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../../../components/Button/index';
 import Error from '../../../components/Error/index';
 import Input from '../../../components/Input/index';
@@ -39,9 +40,9 @@ const LoginForm = () => {
       <S.FormCadastroContainer>
         <S.FormCadastroSubtitle>Cadastre-se</S.FormCadastroSubtitle>
         <p>Ainda não possui conta? Cadastre-se no site.</p>
-        <S.FormBtnRegister as={Button} to="/login/criar">
+        <Button as={Link} to="/login/criar">
           Cadastro
-        </S.FormBtnRegister>
+        </Button>
       </S.FormCadastroContainer>
     </S.FormSection>
   );

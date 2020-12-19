@@ -50,5 +50,3 @@ export const FormCadastroSubtitle = styled.h2`
     border-radius: 0.2rem;
   }
 `;
-
-export const FormBtnRegister = styled(Link)``;

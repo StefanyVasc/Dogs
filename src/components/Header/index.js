@@ -4,7 +4,7 @@ import { UserContext } from '../UserStorage/UserContext';
 import * as S from './styled';
 
 const Header = () => {
-  const { data } = useContext(UserContext);
+  const { data, userLogout } = useContext(UserContext);
 
   return (
     <S.HeaderWrapper>
@@ -13,7 +13,10 @@ const Header = () => {
           <Dogs />
         </S.HeaderLogoLink>
         {data ? (
-          <S.HeaderButton to="/conta">{data.nome}</S.HeaderButton>
+          <S.HeaderButton to="/conta">
+            {data.nome}
+            <button onClick={userLogout}>Sair</button>
+          </S.HeaderButton>
         ) : (
           <S.HeaderButton to="/login">Login | Cadastro</S.HeaderButton>
         )}
