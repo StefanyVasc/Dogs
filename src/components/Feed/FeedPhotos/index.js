@@ -6,14 +6,13 @@ import Loading from '../../Loading';
 import FeedPhotosItem from '../FeedPhotosItem';
 import * as S from './styled';
 
-const FeedPhotos = () => {
+const FeedPhotos = ({ setModalPhoto }) => {
   const { data, loading, error, request } = useFetch();
 
   useEffect(() => {
     async function fetchPhotos() {
       const { url, options } = PHOTOS_GET({ page: 1, total: 6, user: 0 });
-      const { response, json } = await request(url, options);
-      console.log(json);
+      const { json } = await request(url, options);
     }
     fetchPhotos();
   }, [request]);
@@ -21,15 +20,19 @@ const FeedPhotos = () => {
   if (error) return <Error error={error} />;
   if (loading) return <Loading />;
 
-  if (data) {
+  if (data)
     return (
       <S.FeedPhotoList>
         {data.map((photo) => (
-          <FeedPhotosItem photo={photo} key={photo.id} />
+          <FeedPhotosItem
+            key={photo.id}
+            photo={photo}
+            setModalPhoto={setModalPhoto}
+          />
         ))}
       </S.FeedPhotoList>
     );
-  } else return null;
+  else return null;
 };
 
 export default FeedPhotos;
