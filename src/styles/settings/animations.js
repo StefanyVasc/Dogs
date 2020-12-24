@@ -3,7 +3,9 @@ import { keyframes } from 'styled-components';
 /* para usar é preciso passar as seguintes propriedades no componente em questão:
   animation-duration: 0.3s;
   animation-name: ${animaLeft};
-  animation-fill-mode: forwards; */
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite (no caso da animação Button animation)
+  */
 
 // Não pode esquecer de passar as propriedades acima, senão não funcionará a animação
 export const animaLeft = keyframes`
@@ -31,5 +33,14 @@ export const scaleUp = keyframes`
 export const LoadingAnimation = keyframes`
   to{
     transform: rotate(360deg);
+  }
+`;
+
+export const ButtonAnimation = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 `;
