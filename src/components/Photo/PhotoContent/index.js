@@ -29,7 +29,7 @@ const PhotoContent = ({ data }) => {
           </S.DetailsAttributes>
         </div>
       </S.PhotoContentDetails>
-      <PhotoComments id={photo.id} comments={comments} />
+      <PhotoComments id={photo.id} comments={comments} title={photo.title} />
     </S.PhotoContentDiv>
   );
 };
