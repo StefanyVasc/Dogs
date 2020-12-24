@@ -1,10 +1,12 @@
 import React from 'react';
+import Feed from '../../components/Feed';
+import * as S from './styled';
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <S.MainContainer as="section">
+      <Feed />
+    </S.MainContainer>
   );
 };
 
