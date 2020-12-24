@@ -17,6 +17,17 @@ export const animaLeft = keyframes`
   }
 `;
 
+export const scaleUp = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(0.8)
+  }
+  to{
+    opacity: initial;
+    transform: initial;
+  }
+`;
+
 export const LoadingAnimation = keyframes`
   to{
     transform: rotate(360deg);
