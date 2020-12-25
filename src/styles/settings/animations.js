@@ -44,3 +44,12 @@ export const ButtonAnimation = keyframes`
     opacity: 1;
   }
 `;
+
+export const SkeletonAnimation = keyframes`
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -200%;
+  }
+`;

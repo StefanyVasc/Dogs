@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Title } from '../../../styles/elements/base';
+import Image from '../../Image';
 import { UserContext } from '../../UserStorage/UserContext';
 import PhotoComments from '../PhotoComments';
 import PhotoDelete from '../PhotoDelete';
@@ -13,7 +14,7 @@ const PhotoContent = ({ data }) => {
   return (
     <S.PhotoContentDiv>
       <S.PhotoContentImg>
-        <img src={photo.src} alt={photo.title} />
+        <Image src={photo.src} alt={photo.title} />
       </S.PhotoContentImg>
       <S.PhotoContentDetails>
         <div>
