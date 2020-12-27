@@ -19,7 +19,7 @@ const UserHeader = () => {
         setTitle('Estatísticas');
         break;
       default:
-        setTitle('Minha conta');
+        setTitle('Minha Conta');
     }
   }, [location]);
 
