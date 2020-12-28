@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../../components/Button/index';
 import Error from '../../../components/Error/index';
+import Head from '../../../components/Head/index';
 import Input from '../../../components/Input/index';
 import { UserContext } from '../../../components/UserStorage/UserContext';
 import useForm from '../../../hooks/useForm';
@@ -23,6 +24,7 @@ const LoginForm = () => {
   }
   return (
     <S.FormSection>
+      <Head title="Login" description="Área de Login do Dogs" />
       <Title>Login</Title>
       <S.FormLogin onSubmit={handleSubmit}>
         <Input name="username" label="Usuário" type="text" {...username} />

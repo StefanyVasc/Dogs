@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../../../components/Button';
 import Error from '../../../components/Error';
+import Head from '../../../components/Head';
 import Input from '../../../components/Input';
 import useFetch from '../../../hooks/useFetch';
 import useForm from '../../../hooks/useForm';
@@ -27,6 +28,7 @@ const LostPassword = () => {
 
   return (
     <section>
+      <Head title="Perdeu" description="Área para recuperar a senha" />
       <Title>Perdeu a senha?</Title>
       {data ? (
         <S.LostPasswordPassword>{data}</S.LostPasswordPassword>

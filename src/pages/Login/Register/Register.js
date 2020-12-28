@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import Button from '../../../components/Button';
 import Error from '../../../components/Error';
+import Head from '../../../components/Head';
 import Input from '../../../components/Input';
 import { UserContext } from '../../../components/UserStorage/UserContext';
 import useFetch from '../../../hooks/useFetch';
@@ -32,6 +33,7 @@ const Register = () => {
 
   return (
     <S.RegisterSection>
+      <Head title="Cadastro" description="Área de cadastro do site Dogs." />
       <Title>Cadastre-se</Title>
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name={username} {...username} />

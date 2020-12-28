@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../../components/Button';
 import Error from '../../../components/Error';
+import Head from '../../../components/Head';
 import Input from '../../../components/Input';
 import useFetch from '../../../hooks/useFetch';
 import useForm from '../../../hooks/useForm';
@@ -44,6 +45,8 @@ const UserPhotoPost = () => {
   }
   return (
     <S.UserPhotoPostSection>
+      <Head title="Poste sua foto" description="área para postar fotos" />
+
       <form onSubmit={handleSubmit}>
         <Input label="Nome" type="text" name="nome" {...nome} />
         <Input label="Peso" type="number" name="peso" {...peso} />

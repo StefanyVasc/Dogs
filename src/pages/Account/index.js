@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Feed from '../../components/Feed';
+import Head from '../../components/Head';
 import { Layout } from '../../components/Layout/styled';
 import { UserContext } from '../../components/UserStorage/UserContext';
 import NotFound from '../NotFound';
@@ -12,6 +13,7 @@ const Account = () => {
   const { data } = useContext(UserContext);
   return (
     <Layout as="section">
+      <Head title="Minha conta" description="Conta do usuário logado" />
       <UserHeader />
       <Routes>
         <Route path="/" element={<Feed user={data.id} />} />

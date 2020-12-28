@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../../components/Button';
 import Error from '../../../components/Error';
+import Head from '../../../components/Head';
 import Input from '../../../components/Input';
 import useFetch from '../../../hooks/useFetch';
 import useForm from '../../../hooks/useForm';
@@ -37,6 +38,7 @@ const ResetPassword = () => {
 
   return (
     <div>
+      <Head title="Reset" description="Área de reset das senhas." />
       <h1 className="title">Resete a Senha</h1>
       <form onSubmit={handleSubmit}>
         <Input
