@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { UserContext } from '../../components/UserStorage/UserContext';
+import NotFound from '../NotFound';
 import LoginForm from './LoginForm/LoginForm';
 import LostPassword from './LostPassword';
 import Register from './Register/Register';
@@ -19,6 +20,7 @@ const Login = () => {
           <Route path="criar" element={<Register />} />
           <Route path="perdeu" element={<LostPassword />} />
           <Route path="resetar" element={<ResetPassword />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </S.LoginPagesForms>
     </S.LoginContainer>

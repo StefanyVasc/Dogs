@@ -9,6 +9,7 @@ import ProtectedRoute from './pages/Account/ProtectedRoute';
 import UserProfile from './pages/Account/UserProfile/UserProfile';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import NotFound from './pages/NotFound';
 
 export default function Rotas() {
   return (
@@ -22,6 +23,7 @@ export default function Rotas() {
             <ProtectedRoute path="conta/*" element={<Account />} />
             <Route path="foto/:id" element={<Photo />} />
             <Route path="perfil/:user" element={<UserProfile />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </UserStorage>
