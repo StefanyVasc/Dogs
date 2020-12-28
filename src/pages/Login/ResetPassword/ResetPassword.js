@@ -7,6 +7,7 @@ import Input from '../../../components/Input';
 import useFetch from '../../../hooks/useFetch';
 import useForm from '../../../hooks/useForm';
 import { PASSWORD_RESET } from '../../../services/api';
+import { Title } from '../../../styles/elements/base';
 
 const ResetPassword = () => {
   const [login, setLogin] = useState('');
@@ -39,7 +40,7 @@ const ResetPassword = () => {
   return (
     <div>
       <Head title="Reset" description="Área de reset das senhas." />
-      <h1 className="title">Resete a Senha</h1>
+      <Title>Resete a Senha</Title>
       <form onSubmit={handleSubmit}>
         <Input
           label="Nova Senha"
