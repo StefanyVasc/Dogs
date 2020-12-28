@@ -3,9 +3,9 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { UserContext } from '../../components/UserStorage/UserContext';
 import NotFound from '../NotFound';
 import LoginForm from './LoginForm/LoginForm';
-import LostPassword from './LostPassword';
+import LostPassword from './LostPassword/LostPassword';
 import Register from './Register/Register';
-import ResetPassword from './ResetPassword';
+import ResetPassword from './ResetPassword/ResetPassword';
 import * as S from './styled';
 
 const Login = () => {

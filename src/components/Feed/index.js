@@ -57,7 +57,7 @@ Feed.defaultProps = {
 
 Feed.propTypes = {
   user: PropTypes.oneOfType([
-    propTypes.string.isRequired,
+    PropTypes.string.isRequired,
     PropTypes.number.isRequired,
   ]),
 };
