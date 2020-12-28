@@ -7,12 +7,12 @@ import PhotoComments from '../PhotoComments';
 import PhotoDelete from '../PhotoDelete';
 import * as S from './styled';
 
-const PhotoContent = ({ data }) => {
+const PhotoContent = ({ data, single }) => {
   const user = useContext(UserContext);
   const { photo, comments } = data;
 
   return (
-    <S.PhotoContentDiv>
+    <S.PhotoContentDiv className={`${single ? 'singlePhoto' : ''}`}>
       <S.PhotoContentImg>
         <Image src={photo.src} alt={photo.title} />
       </S.PhotoContentImg>
@@ -38,7 +38,12 @@ const PhotoContent = ({ data }) => {
           </S.DetailsAttributes>
         </div>
       </S.PhotoContentDetails>
-      <PhotoComments id={photo.id} comments={comments} title={photo.title} />
+      <PhotoComments
+        single={single}
+        id={photo.id}
+        comments={comments}
+        title={photo.title}
+      />
     </S.PhotoContentDiv>
   );
 };

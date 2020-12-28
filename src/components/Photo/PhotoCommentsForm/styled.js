@@ -1,20 +1,6 @@
 import styled from 'styled-components';
 import { ButtonAnimation } from '../../../styles/settings/animations';
 
-export const CommentForm = styled.form`
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: stretch;
-  margin: 1rem;
-`;
-
-export const CommentLabel = styled.label`
-  grid-area: 1 / span 3;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  font-size: 0.9rem;
-`;
-
 export const CommentTextArea = styled.textarea`
   grid-area: 2/2;
   display: block;
@@ -34,6 +20,32 @@ export const CommentTextArea = styled.textarea`
     border-color: var(--primary-color);
     background: var(--default-color-light);
     box-shadow: 0 0 0 3px var(--tertiary-color);
+  }
+`;
+
+export const CommentLabel = styled.label`
+  grid-area: 1 / span 3;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+`;
+
+export const CommentForm = styled.form`
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: stretch;
+  margin: 1rem;
+
+  &.singlePage {
+    margin: 1rem 0;
+
+    ${CommentLabel} {
+      margin-top: 2rem;
+    }
+
+    ${CommentTextArea} {
+      grid-area: auto;
+    }
   }
 `;
 

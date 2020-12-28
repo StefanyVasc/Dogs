@@ -2,6 +2,11 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 import ViewBlack from '../../../assets/visualizacao-black.svg';
 import { scaleUp } from '../../../styles/settings/animations';
+import { PhotoCommentsList } from '../PhotoComments/styled';
+
+export const PhotoContentDetails = styled.div`
+  padding: 2rem 2rem 0 2rem;
+`;
 
 export const PhotoContentDiv = styled.div`
   margin: auto;
@@ -14,6 +19,25 @@ export const PhotoContentDiv = styled.div`
   overflow: hidden;
   opacity: 0;
 
+  &.singlePhoto {
+    grid-template-columns: 1fr;
+    height: auto;
+
+    img {
+      grid-row: 1;
+      border-radius: 0.4rem;
+      overflow: hidden;
+    }
+
+    ${PhotoContentDetails} {
+      padding: 1rem 0px 0px 0px;
+    }
+
+    ${PhotoCommentsList} {
+      padding: 0px;
+    }
+  }
+
   animation-duration: 0.3s;
   animation-name: ${scaleUp};
   animation-fill-mode: forwards;
@@ -25,19 +49,13 @@ export const PhotoContentDiv = styled.div`
     grid-template-columns: minmax(20rem, 40rem);
   `}
 `;
-/* .comments {
-  padding: 0 2rem;
-} */
+
 export const PhotoContentImg = styled.div`
   grid-row: 1/4;
 
   ${media.lessThan('large')`
     grid-row: 1;
   `}
-`;
-
-export const PhotoContentDetails = styled.div`
-  padding: 2rem 2rem 0 2rem;
 `;
 
 export const DetailsAuthor = styled.p`

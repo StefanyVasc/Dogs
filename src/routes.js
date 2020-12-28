@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Photo from './components/Photo';
 import { UserStorage } from './components/UserStorage/UserContext';
 import Account from './pages/Account';
 import ProtectedRoute from './pages/Account/ProtectedRoute';
@@ -18,6 +19,7 @@ export default function Rotas() {
             <Route path="/" element={<Home />} />
             <Route path="login/*" element={<Login />} />
             <ProtectedRoute path="conta/*" element={<Account />} />
+            <Route path="foto/:id" element={<Photo />} />
           </Routes>
           <Footer />
         </UserStorage>

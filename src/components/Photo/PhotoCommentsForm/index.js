@@ -5,7 +5,7 @@ import { COMMENT_POST } from '../../../services/api';
 import Error from '../../Error';
 import * as S from './styled';
 
-const PhotoCommentsForm = ({ id, setComments }) => {
+const PhotoCommentsForm = ({ id, setComments, single }) => {
   const [comment, setComment] = useState('');
   const { request, error } = useFetch();
 
@@ -23,7 +23,10 @@ const PhotoCommentsForm = ({ id, setComments }) => {
   }
 
   return (
-    <S.CommentForm onSubmit={handleSubmit}>
+    <S.CommentForm
+      onSubmit={handleSubmit}
+      className={`${single ? 'singlePage' : ''}`}
+    >
       <S.CommentLabel htmlFor="comment">
         Que tal deixar um comentário?
       </S.CommentLabel>
