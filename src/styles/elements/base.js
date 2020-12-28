@@ -21,3 +21,13 @@ export const Title = styled.h1`
     z-index: -1;
   }
 `;
+
+export const App = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+
+  .AppBody {
+    flex: 1;
+  }
+`;
