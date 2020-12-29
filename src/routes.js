@@ -15,7 +15,7 @@ import { App } from './styles/elements/base';
 export default function Rotas() {
   return (
     <App>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <UserStorage>
           <Header />
           <main className="AppBody">

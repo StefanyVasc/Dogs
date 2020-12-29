@@ -5,22 +5,27 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.6.0",
+    "@testing-library/user-event": "^12.1.10",
     "history": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^6.0.0-beta.0",
     "react-scripts": "4.0.1",
     "styled-components": "^5.2.1",
-    "styled-reset": "^4.3.4",
-    "web-vitals": "^1.0.1"
+    "styled-media-query": "^2.1.2",
+    "styled-reset": "^4.3.2",
+    "victory": "^35.4.4",
+    "web-vitals": "^0.2.4"
   },
+  "homepage": "https://StefanyVasc.github.io/Dogs",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint . --ext .js,.jsx"
+    "lint": "eslint . --ext .js,.jsx",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +59,7 @@
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.1.0",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1"
