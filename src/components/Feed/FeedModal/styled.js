@@ -13,7 +13,6 @@ export const Modal = styled.div`
   padding: 2rem calc(4rem + 15px) 2rem 4rem;
 
   ${media.lessThan('medium')`
-  padding: 2rem calc(2rem + 15px) 2rem 2rem;
-
+    padding: 2rem calc(2rem + 15px) 2rem 2rem;
   `}
 `;

@@ -6,6 +6,3 @@ export const LostPasswordSection = styled.section`
   animation-name: ${animaLeft};
   animation-fill-mode: forwards;
 `;
-export const LostPasswordMsg = styled.p`
-  color: var(--right-color);
-`;

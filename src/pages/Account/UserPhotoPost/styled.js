@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import { animaLeft } from '../../../styles/settings/animations';
 
 export const UserPhotoPostSection = styled.section`
@@ -14,6 +15,10 @@ export const UserPhotoPostSection = styled.section`
   #img {
     margin-bottom: 2rem;
   }
+
+  ${media.lessThan('medium')`
+    grid-template-columns: 1fr;
+  `}
 `;
 
 export const PhotoPostPreview = styled.div`

@@ -29,6 +29,7 @@ export const FormBtnLostPassword = styled(Link)`
 
 export const FormCadastroContainer = styled.div`
   margin-top: 4rem;
+  margin-bottom: 4rem;
 
   p {
     margin-top: 2rem;

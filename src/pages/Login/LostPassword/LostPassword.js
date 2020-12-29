@@ -27,11 +27,11 @@ const LostPassword = () => {
   }
 
   return (
-    <section>
+    <S.LostPasswordSection>
       <Head title="Perdeu" description="Área para recuperar a senha" />
       <Title>Perdeu a senha?</Title>
       {data ? (
-        <S.LostPasswordPassword>{data}</S.LostPasswordPassword>
+        <S.LostPasswordMsg>{data}</S.LostPasswordMsg>
       ) : (
         <form onSubmit={handleSubmit}>
           <Input label="Email / Usuário" type="text" name="login" {...login} />
@@ -43,7 +43,7 @@ const LostPassword = () => {
         </form>
       )}
       <Error error={error} />
-    </section>
+    </S.LostPasswordSection>
   );
 };
 

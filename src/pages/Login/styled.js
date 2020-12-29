@@ -27,6 +27,7 @@ export const LoginContainer = styled.section`
 export const LoginPagesForms = styled.div`
   max-width: 30rem;
   padding: 1rem;
+  margin-top: 20vh;
 
   ${media.lessThan('medium')`
     max-width: 100%;
